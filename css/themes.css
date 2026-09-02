@@ -44,6 +44,8 @@
 [data-theme="teal"] .footer { background: var(--teal-600); color: rgba(255,255,255,.85); }
 [data-theme="teal"] .footer__legal { color: rgba(255,255,255,.75); }
 [data-theme="teal"] .chart__tip { background: var(--teal-600); }
+[data-theme="teal"] .to-top { background: var(--navy); }
+[data-theme="teal"] .to-top:hover { background: var(--navy-700); }
 
 /* ---------- Theme C: Light Institutional - airy, white with teal accents ---------- */
 [data-theme="light"] .nav { background: rgba(255,254,248,.86); border-bottom-color: var(--line); }
