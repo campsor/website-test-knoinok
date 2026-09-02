@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campsor Capital | Relative-value crypto hedge fund</title>
+  <meta name="description" content="Campsor Capital is a relative-value crypto hedge fund targeting consistent absolute returns through a semi-systematic, market-neutral approach with disciplined risk management.">
+  <meta property="og:title" content="Campsor Capital">
+  <meta property="og:description" content="Relative-value crypto hedge fund. Consistent absolute returns within a meticulously defined risk framework.">
+  <meta property="og:image" content="https://www.campsorcapital.com/assets/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#06273A">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/themes-2.css">
+  <script>
+    /* Theme variant: ?theme=<family>[-colour], see README, remembered in localStorage. Default: navy */
+    (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=q||localStorage.getItem("campsor-theme")||"navy";if(!/^(navy|teal|light|tech|tech-teal|tech-light|aurora|aurora-teal|aurora-light)$/.test(t))t="navy";document.documentElement.setAttribute("data-theme",t);if(q)localStorage.setItem("campsor-theme",t);}catch(e){}})();
+  </script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <div class="container nav__inner">
+    <a href="#top" class="brand" aria-label="Campsor Capital home">
+      <img src="assets/mark-white.png" alt="" class="brand__mark">
+      <span class="brand__word">CAMPSOR</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#fund">Our Fund</a>
+      <a href="#performance">Performance</a>
+      <a href="#team">Team</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <div class="nav__social">
+      <a href="https://x.com/CampsorCapital" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/company/campsor-capital/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+      </a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/hero.jpg" alt="" class="hero__photo">
+    <div class="hero__tint"></div>
+    <div class="hero__grid"></div>
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
+  </div>
+  <div class="container hero__content">
+    <p class="eyebrow reveal">Relative-value crypto hedge fund</p>
+    <h1 class="reveal">CAMPSOR CAPITAL</h1>
+    <p class="hero__lead reveal">Consistent absolute returns within a meticulously defined risk framework. Market-neutral by design, data-driven by process.</p>
+    <div class="hero__actions reveal">
+      <a href="#fund" class="btn btn--primary">Our Fund</a>
+      <a href="#performance" class="btn btn--ghost">Track record</a>
+    </div>
+    <div class="hero__ticks reveal" aria-hidden="true">
+      <span>Market-neutral</span><i></i>
+      <span>Semi-systematic</span><i></i>
+      <span>Multi-venue</span><i></i>
+      <span>Institutional-grade risk</span>
+    </div>
+  </div>
+  <a href="#about" class="hero__scroll" aria-label="Scroll to About"><span></span></a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section section--light" id="about">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">About us</p>
+      <h2>Where crypto natives meet TradFi discipline</h2>
+    </div>
+    <div class="about">
+      <div class="about__text reveal">
+        <p class="lead">Campsor Capital is dedicated to generating risk-adjusted returns by managing a relative-value fund investing in crypto assets. It targets superior returns for investors through a semi-systematic approach that exploits market discontinuities whilst minimizing directional exposures and counterparty risk.</p>
+        <p>We aim to achieve consistent absolute returns within a meticulously defined risk framework.</p>
+        <p>Founded by the marriage of crypto natives with veterans from TradFi, our team brings extensive experience from prominent Wall Street institutions such as Deutsche Bank, Banca Intesa, and MUFG, as well as leading hedge funds. This expertise is enhanced by a robust academic foundation in econometrics, mathematics, and engineering.</p>
+      </div>
+      <ul class="facts reveal">
+        <li><span class="facts__k">Strategy</span><span class="facts__v">Relative value, market-neutral</span></li>
+        <li><span class="facts__k">Process</span><span class="facts__v">Semi-systematic, data-driven</span></li>
+        <li><span class="facts__k">Venues</span><span class="facts__v">Spot, derivatives, DeFi</span></li>
+        <li><span class="facts__k">Track record</span><span class="facts__v">Since 2019</span></li>
+        <li><span class="facts__k">Regulation</span><span class="facts__v">BVI FSC Approved Manager</span></li>
+        <li><span class="facts__k">Investors</span><span class="facts__v">Professional &amp; accredited</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUND ============ -->
+<section class="section section--teal" id="fund">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Our fund</p>
+      <h2>The Fund</h2>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pillar__num">01</div>
+        <h3>Investment objectives</h3>
+        <p>Campsor aims to achieve consistent, stable, and absolute returns by leveraging our diverse skillset and a disciplined risk management style. The fund targets double-digit returns with a volatility of 15–20%.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar__num">02</div>
+        <h3>Our approach</h3>
+        <p>The investment strategy is based on two pillars: monetization of dislocations across platforms and products; and dynamic allocation to market-neutral opportunities in innovative venues and protocols including DeFi.</p>
+        <p>Campsor aims at minimizing risks through a robust risk management approach and selection of tier-one platforms and service providers. Our investment process is data-driven and semi-systematic, allowing us to make objective decisions and execute trades efficiently.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HEDGE ============ -->
+<section class="section section--navy" id="hedge">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Risk framework</p>
+      <h2>The Hedge</h2>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="21" cy="21" r="12"/><path d="M30 30l11 11"/><path d="M14 22l4-5 4 4 5-8"/>
+          </svg>
+        </div>
+        <h3>Risk management</h3>
+        <p>Traditional risk management approach pairing well with the innovative nature of crypto-assets, using data driven models and systematic scenario analysis to quantify exposures, preserve portfolio diversification and hedge unwanted risks.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="8" width="36" height="10" rx="2"/><rect x="6" y="20" width="36" height="10" rx="2"/><rect x="6" y="32" width="36" height="10" rx="2"/>
+            <path d="M12 13h.01M12 25h.01M12 37h.01M20 13h14M20 25h10M20 37h16"/>
+          </svg>
+        </div>
+        <h3>Proprietary infrastructure</h3>
+        <p>Combining our quantitative and DevOps expertise, we have developed advanced analytics and execution systems that power multi-venue trading with minimal slippage and efficient liquidity sourcing across spot, derivatives, and DeFi markets.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 5l16 6v11c0 9-6.5 16.5-16 21C14.5 38.5 8 31 8 22V11z"/><path d="M17 23l5 5 9-10"/>
+          </svg>
+        </div>
+        <h3>Counterparty protection</h3>
+        <p>Pioneering counterparty credit risk mitigation via triparty agreements, where the collateral is held by a regulated trusted third-party custodian, reducing credit exposure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERFORMANCE ============ -->
+<section class="section section--light" id="performance">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Performance</p>
+      <h2>Track record of net returns<sup>*</sup></h2>
+    </div>
+
+    <div class="perf reveal">
+      <div class="perf__chart-wrap">
+        <div class="perf__chart-head">
+          <span class="perf__chart-title">Cumulative net performance</span>
+          <span class="perf__chart-sub">Compounded from the monthly returns below · indexed to 100</span>
+        </div>
+        <div class="chart" id="perfChart" role="img" aria-label="Cumulative net performance line chart, compounded from the monthly returns in the table below"></div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="perf-table" id="perfTable">
+          <thead>
+            <tr>
+              <th scope="col">Year</th>
+              <th scope="col">Jan</th><th scope="col">Feb</th><th scope="col">Mar</th><th scope="col">Apr</th>
+              <th scope="col">May</th><th scope="col">Jun</th><th scope="col">Jul</th><th scope="col">Aug</th>
+              <th scope="col">Sep</th><th scope="col">Oct</th><th scope="col">Nov</th><th scope="col">Dec</th>
+              <th scope="col" class="perf-table__annual">Annual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">2019</th><td>3.9%</td><td>6.5%</td><td>2.2%</td><td>8.8%</td><td>0.7%</td><td>2.2%</td><td>0.6%</td><td>0.0%</td><td>-0.2%</td><td>1.0%</td><td>2.0%</td><td>1.0%</td><td class="perf-table__annual">32.2%</td></tr>
+            <tr><th scope="row">2020</th><td>1.0%</td><td>2.1%</td><td>4.8%</td><td>1.9%</td><td>4.1%</td><td>0.2%</td><td>1.2%</td><td>8.7%</td><td>0.6%</td><td>10.1%</td><td>5.4%</td><td>20.9%</td><td class="perf-table__annual">78.7%</td></tr>
+            <tr><th scope="row">2021</th><td>8.9%</td><td>4.5%</td><td>9.6%</td><td>12.7%</td><td>2.5%</td><td>-3.5%</td><td>8.3%</td><td>7.0%</td><td>1.4%</td><td>1.0%</td><td>2.1%</td><td>0.0%</td><td class="perf-table__annual">68.2%</td></tr>
+            <tr><th scope="row">2022</th><td>0.0%</td><td>2.7%</td><td>1.1%</td><td>0.9%</td><td>-3.1%</td><td>-2.0%</td><td>0.9%</td><td>-0.1%</td><td>-0.2%</td><td>-0.4%</td><td>-13.3%</td><td>-1.0%</td><td class="perf-table__annual">-12.6%</td></tr>
+            <tr><th scope="row">2023</th><td>7.2%</td><td>0.8%</td><td>0.9%</td><td>-0.3%</td><td>1.0%</td><td>3.1%</td><td>1.1%</td><td>0.5%</td><td>0.4%</td><td>0.8%</td><td>1.2%</td><td>0.4%</td><td class="perf-table__annual">18.4%</td></tr>
+            <tr><th scope="row">2024</th><td>0.8%</td><td>1.8%</td><td>2.5%</td><td>1.6%</td><td>1.4%</td><td>2.8%</td><td>0.9%</td><td>0.2%</td><td>3.1%</td><td>0.6%</td><td>4.9%</td><td>0.2%</td><td class="perf-table__annual">22.6%</td></tr>
+            <tr><th scope="row">2025</th><td>0.0%</td><td>-6.2%</td><td>0.2%</td><td>0.7%</td><td>0.5%</td><td>1.3%</td><td>1.0%</td><td>1.5%</td><td>2.0%</td><td>20.6%</td><td>7.1%</td><td>2.7%</td><td class="perf-table__annual">33.7%</td></tr>
+            <tr><th scope="row">2026</th><td>2.9%</td><td>2.1%</td><td>1.0%</td><td>-2.5%</td><td>5.5%</td><td>3.8%</td><td>-0.5%</td><td></td><td></td><td></td><td></td><td></td><td class="perf-table__annual">12.6%<span class="ytd">YTD</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footnote">* Past performance is not a reliable indicator of future performance. You should not rely on any past performance as a guarantee of future investment performance. Capital is at risk. The value of an investment can go down as well as up and you may get back less than you invested. Performance data shown until March 2022 included are unaudited and represent past performance of certain proprietary trading activities assuming a similar fee structure as Campsor's. Returns from April 2022 represent Campsor's Class A Shares net returns.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section class="section section--teal section--tight" id="partners">
+  <div class="container">
+    <p class="eyebrow eyebrow--center reveal">Our trusted service providers and partners</p>
+    <div class="partners reveal">
+      <a href="https://www.navconsulting.net/" target="_blank" rel="noopener" class="partner" aria-label="NAV Fund Administration"><img src="assets/nav.png" alt="NAV"></a>
+      <a href="https://www.mha.co.uk/" target="_blank" rel="noopener" class="partner" aria-label="MHA Cayman"><img src="assets/mha.png" alt="MHA Cayman"></a>
+      <a href="https://www.walkersglobal.com/" target="_blank" rel="noopener" class="partner" aria-label="Walkers"><img src="assets/walkers.png" alt="Walkers"></a>
+      <a href="https://www.calderwood.ky/" target="_blank" rel="noopener" class="partner partner--text" aria-label="Calderwood">Calderwood</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="section section--light" id="team">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">Team</p>
+      <h2>Diverse and experienced team</h2>
+      <p class="lead section__lead">Our team unites early-mover crypto traders who have been active since 2011, seasoned traditional-finance professionals with more than five decades of combined structuring and trading expertise, and a squad of highly skilled developers who work hand-in-hand with the investment desk to dissect protocols and build the risk-management technology that powers our edge.</p>
+    </div>
+
+    <div class="team">
+      <article class="member reveal">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true"><img src="assets/team/piervanni-ugolini-mugelli.jpg" alt="" loading="lazy" onerror="this.remove()"><span>PU</span></div>
+          <div>
+            <h3>Piervanni Ugolini Mugelli</h3>
+            <p class="member__role">Partner &amp; CIO</p>
+          </div>
+        </div>
+        <p>Early adopter of digital assets, he began mining and investing in Bitcoin in 2011. Founder of UgoliniCapital, a proprietary trading firm dedicated to crypto-asset strategies, subsequently launched SaveBox.io, the market's first specialised crypto-lending desk, which he successfully exited in 2021. As a seed-stage equity investor, he has backed several of the sector's flagship platforms, including Kraken, Bitstamp, Deribit, Coinbase and Circle, providing both capital and strategic insight during their formative years.</p>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true"><img src="assets/team/federico-ombriti.jpg" alt="" loading="lazy" onerror="this.remove()"><span>FO</span></div>
+          <div>
+            <h3><a href="https://www.linkedin.com/in/federico-ombriti/" target="_blank" rel="noopener">Federico Ombriti</a></h3>
+            <p class="member__role">Business Developer</p>
+          </div>
+        </div>
+        <p>Cloud-systems engineer for over a decade, having led international cyber-defence operations for a major Italian state-owned enterprise. Drove the end-to-end restructuring of risk-management architecture for a large asset manager, integrating real-time analytics into portfolio and trading workflows. Skilled smart-contract developer, he has also built on-chain automations and algorithmic trading bots that bridge CeFi and DeFi venues.</p>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true"><img src="assets/team/antonio-vulcano.jpg" alt="" loading="lazy" onerror="this.remove()"><span>AV</span></div>
+          <div>
+            <h3><a href="https://www.linkedin.com/in/antonio-vulcano-b0375916/" target="_blank" rel="noopener">Antonio Vulcano</a></h3>
+            <p class="member__role">Equity Partner</p>
+          </div>
+        </div>
+        <p>With 15 years in capital markets, he specialises in modelling, trading and structuring complex derivative products. He has held front-office roles at Deutsche Bank, Mediobanca, MUFG and EFG Bank, designing bespoke solutions across rates, FX and credit markets. Academically, he earned both an MSc in Finance and a PhD in Applied Mathematics from Bocconi University, Milan.</p>
+      </article>
+
+      <article class="member reveal">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true"><img src="assets/team/simona-zambrano.jpg" alt="" loading="lazy" onerror="this.remove()"><span>SZ</span></div>
+          <div>
+            <h3><a href="https://www.linkedin.com/in/simona-zambrano-a9a673215/" target="_blank" rel="noopener">Simona Zambrano</a></h3>
+            <p class="member__role">Quant</p>
+          </div>
+        </div>
+        <p>Quant with a market-risk background at Banco BPM, where she validated pricing models and ran stress testing and sensitivity analysis in Python and C++. MSc in Mathematics with honours from the University of Milan. At Campsor she owns the quantitative layer of the investment process, designing and validating the pricing and risk models behind the strategies and turning research into systematic execution alongside the trading desk.</p>
+      </article>
+
+
+      <article class="member reveal">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true"><img src="assets/team/emanuele-rigo.jpg" alt="" loading="lazy" onerror="this.remove()"><span>ER</span></div>
+          <div>
+            <h3>Emanuele Rigo</h3>
+            <p class="member__role">External Advisor, Regulation and Risk</p>
+          </div>
+        </div>
+        <p>Emanuele Rigo is a senior financial-services executive with more than 15 years' experience in investment management, regulatory compliance and enterprise risk. As senior executive at an asset-management firm overseeing a nine-figure portfolio, he has extensive experience in corporate strategy, governance and regulatory frameworks, and directed cross-functional teams to deliver scalable growth and demonstrable risk-adjusted results.</p>
+      </article>
+
+
+      <article class="member reveal">
+        <div class="member__head">
+          <div class="member__avatar" aria-hidden="true"><img src="assets/team/samuel-ventimiglia.jpg" alt="" loading="lazy" onerror="this.remove()"><span>SV</span></div>
+          <div>
+            <h3>Samuel Ventimiglia</h3>
+            <p class="member__role">Senior Software Engineer</p>
+          </div>
+        </div>
+        <p>17-year career as tech founder and developer, with deep expertise in cloud computing, AI/ML and blockchain. Founder &amp; CEO of Heveloon Ltd, a software development company successfully exited in 2025. Led complex IT projects for Unicredit, Moncler, and Dolce &amp; Gabbana. Spearheaded cloud migration for Banca Progetto, requiring special authorisation from the Bank of Italy.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--teal" id="contact">
+  <div class="container contact">
+    <div class="contact__text reveal">
+      <p class="eyebrow">Contact us</p>
+      <h2>Get in touch</h2>
+      <p>Our funds are open exclusively to professional and accredited investors, with a minimum investment of $100,000.</p>
+      <p>If you meet these criteria and would like to learn more, please complete the form to receive additional information.</p>
+      <p class="contact__mail">Or write to <a href="mailto:info@campsorcapital.com">info@campsorcapital.com</a></p>
+    </div>
+
+    <!--
+      GitHub Pages is static: the form needs a form backend.
+      1) Create a free form at https://formspree.io, copy your form ID
+      2) Replace YOUR_FORM_ID below. Until then, the form falls back to opening the user's mail client.
+    -->
+    <form class="form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+      <div class="form__row">
+        <label class="field">
+          <span>Name *</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label class="field">
+          <span>Email *</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+      </div>
+      <div class="form__row">
+        <label class="field">
+          <span>Phone number</span>
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label class="field">
+          <span>Company</span>
+          <input type="text" name="company" autocomplete="organization">
+        </label>
+      </div>
+      <label class="field">
+        <span>Message *</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+      <label class="check">
+        <input type="checkbox" name="professional" required>
+        <span>I confirm I am a professional or accredited investor.</span>
+      </label>
+      <button type="submit" class="btn btn--light">Submit</button>
+      <p class="form__status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="disclaimer">
+  <div class="container">
+    <div class="footer__top">
+      <a href="#top" class="brand brand--footer" aria-label="Back to top">
+        <img src="assets/mark-white.png" alt="" class="brand__mark">
+        <span class="brand__word">CAMPSOR</span>
+      </a>
+      <nav class="footer__links">
+        <a href="#about">About</a>
+        <a href="#fund">Our Fund</a>
+        <a href="#performance">Performance</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://x.com/CampsorCapital" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/campsor-capital/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>Campsor Capital Limited is incorporated in the British Virgin Islands and registered as an Approved Manager with the BVI Financial Services Commission.</p>
+      <p>Nothing on this website constitutes investment advice or an offer to buy or sell any security. Investing carries a degree of risk. Digital assets are highly volatile. Investors could lose all or a substantial portion of their investment. Past performance is not indicative of future results. This website is directed exclusively at professional and accredited investors. The information contained herein is not intended for, and should not be relied upon by, retail investors or any person in a jurisdiction where such distribution would be unlawful.</p>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Campsor Capital Limited. All rights reserved.</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Theme switcher: preview only, remove once a variant is chosen -->
+<div class="theme-switch" role="group" aria-label="Design variant">
+  <div class="theme-switch__head"><span class="theme-switch__fam">Family</span><a href="variants.html" class="theme-switch__all">All variants &#8599;</a></div>
+  <div class="theme-switch__row"><span class="theme-switch__fam">1 Classic</span>
+    <button type="button" data-theme-set="navy">Navy</button><button type="button" data-theme-set="teal">Teal</button><button type="button" data-theme-set="light">Light</button></div>
+  <div class="theme-switch__row"><span class="theme-switch__fam">2 Terminal</span>
+    <button type="button" data-theme-set="tech">Navy</button><button type="button" data-theme-set="tech-teal">Teal</button><button type="button" data-theme-set="tech-light">Light</button></div>
+  <div class="theme-switch__row"><span class="theme-switch__fam">3 Aurora</span>
+    <button type="button" data-theme-set="aurora">Navy</button><button type="button" data-theme-set="aurora-teal">Teal</button><button type="button" data-theme-set="aurora-light">Light</button></div>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

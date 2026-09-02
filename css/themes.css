@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Team avatar with optional photo (falls back to initials)
+   ========================================================================== */
+.member__avatar { position: relative; overflow: hidden; }
+.member__avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+
+/* ==========================================================================
+   THEME VARIANTS - selected via <html data-theme="navy|teal|light">
+   Default (no attribute / "navy") = Navy Tech, defined in style.css.
+   ========================================================================== */
+
+/* ---------- Theme B: Teal Heritage - closest to the original site ---------- */
+[data-theme="teal"] .nav { background: rgba(0,151,167,.92); border-bottom-color: rgba(255,255,255,.14); }
+[data-theme="teal"] .nav.is-scrolled { background: rgba(0,151,167,.97); }
+[data-theme="teal"] .nav__links a.nav__cta { background: var(--navy); }
+[data-theme="teal"] .nav__links a.nav__cta:hover { background: var(--navy-700); }
+[data-theme="teal"] .nav__links a::after { background: #fff; }
+
+[data-theme="teal"] .hero { background: var(--teal); }
+[data-theme="teal"] .hero__photo { opacity: .75; filter: saturate(.85) contrast(1.05); }
+[data-theme="teal"] .hero__tint {
+  background:
+    linear-gradient(180deg, rgba(0,151,167,.55) 0%, rgba(0,120,135,.55) 55%, rgba(0,151,167,.96) 100%),
+    linear-gradient(90deg, rgba(6,39,58,.45), rgba(6,39,58,0) 70%);
+}
+[data-theme="teal"] .hero__grid { opacity: .25; }
+[data-theme="teal"] .hero .eyebrow { color: #CFEDF1; }
+[data-theme="teal"] .hero__ticks i { background: #CFEDF1; }
+[data-theme="teal"] .btn--primary { background: var(--navy); }
+[data-theme="teal"] .btn--primary:hover { background: var(--navy-700); }
+
+[data-theme="teal"] .section--navy { background: var(--teal-600); }
+[data-theme="teal"] .section--navy::before { opacity: .35; }
+[data-theme="teal"] .card { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22); }
+[data-theme="teal"] .card::before { background: linear-gradient(90deg, #fff, transparent); }
+[data-theme="teal"] .card__icon { color: #fff; background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.3); }
+[data-theme="teal"] .card p { color: rgba(255,255,255,.88); }
+[data-theme="teal"] .section--navy .eyebrow { color: rgba(255,255,255,.75); }
+
+[data-theme="teal"] .perf-table thead th { background: var(--teal); color: #fff; }
+[data-theme="teal"] .perf-table thead .perf-table__annual { background: var(--navy); }
+[data-theme="teal"] .member__avatar { background: var(--teal); }
+[data-theme="teal"] .footer { background: var(--teal-600); color: rgba(255,255,255,.85); }
+[data-theme="teal"] .footer__legal { color: rgba(255,255,255,.75); }
+[data-theme="teal"] .chart__tip { background: var(--teal-600); }
+
+/* ---------- Theme C: Light Institutional - airy, white with teal accents ---------- */
+[data-theme="light"] .nav { background: rgba(255,254,248,.86); border-bottom-color: var(--line); }
+[data-theme="light"] .nav.is-scrolled { background: rgba(255,254,248,.96); box-shadow: 0 6px 30px -20px rgba(6,39,58,.4); }
+[data-theme="light"] .brand { color: var(--navy); }
+[data-theme="light"] .nav .brand__mark { content: url("../assets/mark-navy.png"); }
+[data-theme="light"] .nav__links a { color: var(--ink-2); }
+[data-theme="light"] .nav__links a:hover, [data-theme="light"] .nav__links a.is-active { color: var(--navy); }
+[data-theme="light"] .nav__links a::after { background: var(--teal); }
+[data-theme="light"] .nav__links a.nav__cta { color: #fff; }
+[data-theme="light"] .nav__social a { color: var(--ink-2); }
+[data-theme="light"] .nav__social a:hover { background: rgba(6,39,58,.06); color: var(--navy); }
+[data-theme="light"] .nav__burger span { background: var(--navy); }
+@media (max-width: 880px) {
+  [data-theme="light"] .nav__links { background: var(--paper); }
+  [data-theme="light"] .nav__links a { color: var(--navy); }
+}
+
+[data-theme="light"] .hero { background: var(--paper); color: var(--navy); }
+[data-theme="light"] .hero__photo { opacity: .28; filter: saturate(.5) contrast(1.05) brightness(1.15); }
+[data-theme="light"] .hero__tint {
+  background:
+    linear-gradient(180deg, rgba(255,254,248,.55) 0%, rgba(255,254,248,.35) 50%, rgba(255,254,248,1) 100%),
+    linear-gradient(90deg, rgba(207,237,241,.9), rgba(255,254,248,0) 70%);
+}
+[data-theme="light"] .hero__grid {
+  background-image:
+    linear-gradient(rgba(6,39,58,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6,39,58,.08) 1px, transparent 1px);
+  opacity: .6;
+}
+[data-theme="light"] .hero__canvas { opacity: .55; }
+[data-theme="light"] .hero .eyebrow { color: var(--teal-600); }
+[data-theme="light"] .hero h1 { color: var(--navy); }
+[data-theme="light"] .hero__lead { color: var(--ink-2); }
+[data-theme="light"] .hero__ticks { color: var(--ink-3); }
+[data-theme="light"] .hero__ticks i { background: var(--teal); }
+[data-theme="light"] .btn--ghost { border-color: rgba(6,39,58,.35); color: var(--navy); }
+[data-theme="light"] .btn--ghost:hover { border-color: var(--navy); background: rgba(6,39,58,.05); }
+[data-theme="light"] .hero__scroll { border-color: rgba(6,39,58,.3); }
+
+[data-theme="light"] .section--teal { background: var(--paper-2); color: var(--ink); }
+[data-theme="light"] .section--teal .eyebrow { color: var(--teal-600); }
+[data-theme="light"] .pillar { background: #fff; border-color: var(--line); backdrop-filter: none; box-shadow: var(--shadow); }
+[data-theme="light"] .pillar:hover { background: #fff; }
+[data-theme="light"] .pillar__num { color: var(--teal-600); }
+[data-theme="light"] .pillar h3 { color: var(--navy); }
+[data-theme="light"] .pillar p { color: var(--ink-2); }
+
+[data-theme="light"] .section--navy { background: var(--teal); }
+[data-theme="light"] .section--navy .eyebrow { color: rgba(255,255,255,.8); }
+[data-theme="light"] .card { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.25); }
+[data-theme="light"] .card::before { background: linear-gradient(90deg, #fff, transparent); }
+[data-theme="light"] .card__icon { color: #fff; background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.3); }
+[data-theme="light"] .card p { color: rgba(255,255,255,.9); }
+
+[data-theme="light"] #partners { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+[data-theme="light"] #partners .eyebrow { color: var(--teal-600); }
+[data-theme="light"] .partner { background: var(--teal); border-color: var(--teal); }
+[data-theme="light"] .partner:hover { background: var(--teal-600); }
+
+[data-theme="light"] #contact { background: var(--navy); color: #fff; }
+[data-theme="light"] #contact .eyebrow { color: var(--teal-300); }
+[data-theme="light"] .form { background: rgba(255,255,255,.05); border-color: var(--line-on-dark); }
+[data-theme="light"] .field input:focus, [data-theme="light"] .field textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,151,167,.35); }
+[data-theme="light"] .btn--light { background: var(--teal); color: #fff; }
+[data-theme="light"] .btn--light:hover { background: var(--teal-300); color: var(--navy); }
+[data-theme="light"] .check input { accent-color: var(--teal); }
+
+/* ==========================================================================
+   Theme switcher (preview only) - remove once a variant is chosen
+   ========================================================================== */
+.theme-switch {
+  position: fixed; right: 18px; bottom: 18px; z-index: 90;
+  display: flex; gap: 4px; padding: 5px; border-radius: 999px;
+  background: rgba(6,39,58,.92); border: 1px solid rgba(255,255,255,.15); box-shadow: 0 12px 40px -12px rgba(0,0,0,.5);
+  backdrop-filter: blur(10px);
+}
+.theme-switch button {
+  font: 600 12px/1 var(--font-sans); letter-spacing: .02em; color: rgba(255,255,255,.75);
+  background: none; border: 0; border-radius: 999px; padding: 9px 14px; cursor: pointer; transition: background .2s, color .2s;
+}
+.theme-switch button:hover { color: #fff; }
+.theme-switch button.is-active { background: var(--teal); color: #fff; }
+@media (max-width: 560px) { .theme-switch { right: 12px; bottom: 12px; } .theme-switch button { padding: 8px 11px; font-size: 11px; } }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campsor Capital | Design variants</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --teal:#0097A7; --teal-300:#4FC3D1; --navy:#06273A; --ink:#0F2230; --ink-2:#3D5563; --ink-3:#6B8290; --paper:#FFFEF8; --line:rgba(6,39,58,.12); }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+    .wrap { width: min(1240px, calc(100% - 48px)); margin: 0 auto; padding: 64px 0 96px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--navy); text-decoration: none; }
+    .brand img { height: 34px; }
+    .brand span { font-weight: 600; letter-spacing: .32em; font-size: 14px; }
+    .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--teal); margin: 0 0 10px; }
+    h1 { margin: 0; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -.02em; line-height: 1.1; }
+    .intro { margin: 10px 0 0; color: var(--ink-2); max-width: 680px; }
+    .family { margin-top: 56px; }
+    .family__head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 28px; margin-bottom: 20px; }
+    .family__num { font-family: "IBM Plex Mono", monospace; font-size: 13px; letter-spacing: .16em; color: var(--teal); }
+    .family h2 { margin: 0; font-size: 24px; letter-spacing: -.01em; }
+    .family__desc { margin: 0; color: var(--ink-2); flex-basis: 100%; max-width: 760px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px -30px rgba(6,39,58,.5); }
+    .card img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: #e8ecee; }
+    .card .body { padding: 16px 18px 18px; }
+    .card .tag { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); }
+    .card h3 { margin: 4px 0 6px; font-size: 18px; letter-spacing: -.01em; }
+    .card p { margin: 0; color: var(--ink-2); font-size: 14px; }
+    .card .open { margin-top: 12px; display: inline-block; font-weight: 600; font-size: 14px; color: var(--navy); }
+    .card .open::after { content: " \2192"; }
+    .swatches { display: flex; gap: 6px; margin-top: 10px; }
+    .swatches i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(0,0,0,.12); display: block; }
+    .note { margin-top: 48px; padding: 18px 22px; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink-2); font-size: 14px; }
+    .note code { font-family: "IBM Plex Mono", monospace; font-size: 13px; background: rgba(0,151,167,.08); padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="brand"><img src="assets/mark-navy.png" alt=""><span>CAMPSOR</span></a>
+  <p class="eyebrow" style="margin-top:26px">Website redesign</p>
+  <h1>Design variants</h1>
+  <p class="intro">Three design families, each in three colourways: Navy, Teal (closest to the current palette) and Light. Same content and structure throughout. Open any variant and use the switcher in the bottom-right corner to compare without losing your place.</p>
+
+  <!-- Family 1 -->
+  <section class="family">
+    <div class="family__head">
+      <span class="family__num">FAMILY 1</span><h2>Classic</h2>
+      <p class="family__desc">Institutional and restrained. Inter for text, monospace only for labels and numbers. Solid colour blocks, thin borders, a subtle network animation in the hero.</p>
+    </div>
+    <div class="grid">
+      <a class="card" href="index.html?theme=navy">
+        <img src="assets/previews/navy.jpg" alt="">
+        <div class="body"><span class="tag">1 · Navy</span><h3>Classic Navy</h3><p>Deep navy hero and Hedge section, teal accents, off-white content sections.</p>
+        <div class="swatches"><i style="background:#06273A"></i><i style="background:#0097A7"></i><i style="background:#FFFEF8"></i></div><span class="open">Open</span></div>
+      </a>
+      <a class="card" href="index.html?theme=teal">
+        <img src="assets/previews/teal.jpg" alt="">
+        <div class="body"><span class="tag">1 · Teal</span><h3>Classic Teal</h3><p>Teal header, hero and sections as on the current site, navy buttons. The familiar palette, modernised.</p>
+        <div class="swatches"><i style="background:#0097A7"></i><i style="background:#007F8D"></i><i style="background:#06273A"></i></div><span class="open">Open</span></div>
+      </a>
+      <a class="card" href="index.html?theme=light">
+        <img src="assets/previews/light.jpg" alt="">
+        <div class="body"><span class="tag">1 · Light</span><h3>Classic Light</h3><p>Airy off-white pages, teal blocks for emphasis, navy contact section. Closest to a traditional asset manager.</p>
+        <div class="swatches"><i style="background:#FFFEF8"></i><i style="background:#0097A7"></i><i style="background:#06273A"></i></div><span class="open">Open</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Family 2 -->
+  <section class="family">
+    <div class="family__head">
+      <span class="family__num">FAMILY 2</span><h2>Terminal</h2>
+      <p class="family__desc">Data-desk aesthetic: everything in monospace, uppercase headings, grid and scanlines in the background, corner brackets on cards, blinking cursor, glowing performance curve.</p>
+    </div>
+    <div class="grid">
+      <a class="card" href="index.html?theme=tech">
+        <img src="assets/previews/tech.jpg" alt="">
+        <div class="body"><span class="tag">2 · Navy</span><h3>Terminal Navy</h3><p>Near-black background with cyan accents. The darkest and most technical of the nine.</p>
+        <div class="swatches"><i style="background:#060B10"></i><i style="background:#4FC3D1"></i><i style="background:#0097A7"></i></div><span class="open">Open</span></div>
+      </a>
+      <a class="card" href="index.html?theme=tech-teal">
+        <img src="assets/previews/tech-teal.jpg" alt="">
+        <div class="body"><span class="tag">2 · Teal</span><h3>Terminal Teal</h3><p>Deep teal background with mint accents and a teal header. Terminal feel in the house colour.</p>
+        <div class="swatches"><i style="background:#03343A"></i><i style="background:#8FEBF3"></i><i style="background:#007F8D"></i></div><span class="open">Open</span></div>
+      </a>
+      <a class="card" href="index.html?theme=tech-light">
+        <img src="assets/previews/tech-light.jpg" alt="">
+        <div class="body"><span class="tag">2 · Light</span><h3>Terminal Light</h3><p>Paper-white blueprint: navy monospace text, teal accents, light grid. Technical but bright.</p>
+        <div class="swatches"><i style="background:#F6F8F7"></i><i style="background:#06273A"></i><i style="background:#0097A7"></i></div><span class="open">Open</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Family 3 -->
+  <section class="family">
+    <div class="family__head">
+      <span class="family__num">FAMILY 3</span><h2>Aurora</h2>
+      <p class="family__desc">Contemporary digital-asset feel: a slowly drifting gradient mesh behind frosted-glass panels, gradient wordmark and buttons, soft rounded corners.</p>
+    </div>
+    <div class="grid">
+      <a class="card" href="index.html?theme=aurora">
+        <img src="assets/previews/aurora.jpg" alt="">
+        <div class="body"><span class="tag">3 · Navy</span><h3>Aurora Navy</h3><p>Deep-sea navy mesh with teal and indigo glows, dark glass panels.</p>
+        <div class="swatches"><i style="background:#0B1A24"></i><i style="background:#0097A7"></i><i style="background:#4FC3D1"></i></div><span class="open">Open</span></div>
+      </a>
+      <a class="card" href="index.html?theme=aurora-teal">
+        <img src="assets/previews/aurora-teal.jpg" alt="">
+        <div class="body"><span class="tag">3 · Teal</span><h3>Aurora Teal</h3><p>Teal-dominant mesh with light glass panels, white accents and navy buttons. The boldest use of the house colour.</p>
+        <div class="swatches"><i style="background:#047E8D"></i><i style="background:#4FC3D1"></i><i style="background:#06273A"></i></div><span class="open">Open</span></div>
+      </a>
+      <a class="card" href="index.html?theme=aurora-light">
+        <img src="assets/previews/aurora-light.jpg" alt="">
+        <div class="body"><span class="tag">3 · Light</span><h3>Aurora Light</h3><p>Pale mesh of teal and celeste on white, bright glass panels, navy-to-teal gradient wordmark.</p>
+        <div class="swatches"><i style="background:#F5FAFB"></i><i style="background:#4FC3D1"></i><i style="background:#06273A"></i></div><span class="open">Open</span></div>
+      </a>
+    </div>
+  </section>
+
+  <p class="note">Direct links: <code>?theme=navy</code>, <code>teal</code>, <code>light</code>, <code>tech</code>, <code>tech-teal</code>, <code>tech-light</code>, <code>aurora</code>, <code>aurora-teal</code>, <code>aurora-light</code>. The last choice is remembered in the browser.</p>
+</div>
+</body>
+</html>
