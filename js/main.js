@@ -26,6 +26,18 @@
     })
   );
 
+  // Brand (logo + wordmark) in the nav and footer: scroll back to the very top
+  document.querySelectorAll('a.brand[href="#top"]').forEach((a) =>
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      links.classList.remove("is-open"); burger.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false"); document.body.classList.remove("menu-open");
+      const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
+      if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+    })
+  );
+
   const sections = [...document.querySelectorAll("section[id], footer[id]")];
   const navAnchors = [...links.querySelectorAll("a[href^='#']")];
   const spy = new IntersectionObserver(
