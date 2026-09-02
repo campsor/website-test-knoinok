@@ -15,12 +15,14 @@
     const open = links.classList.toggle("is-open");
     burger.classList.toggle("is-open", open);
     burger.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("menu-open", open);
   });
   links.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       links.classList.remove("is-open");
       burger.classList.remove("is-open");
       burger.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
     })
   );
 

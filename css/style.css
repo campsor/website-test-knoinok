@@ -368,8 +368,11 @@ sup { font-size: .5em; vertical-align: super; }
   .partners { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 880px) {
+  /* backdrop-filter would make .nav the containing block of the fixed drawer: disable it on mobile */
+  .nav { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(6, 39, 58, 0.94); }
+  body.menu-open { overflow: hidden; }
   .nav__links {
-    position: fixed; top: 0; right: 0; bottom: 0; width: min(320px, 85vw);
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(320px, 85vw); z-index: 55; overflow-y: auto;
     flex-direction: column; gap: 4px; padding: 96px 22px 32px;
     background: var(--navy); transform: translateX(100%); transition: transform .35s var(--ease);
     box-shadow: -20px 0 60px rgba(0,0,0,.35);

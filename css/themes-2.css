@@ -109,6 +109,7 @@
 [data-theme^="tech"] .brand__word { letter-spacing: .38em; }
 [data-theme="tech-light"] .nav .brand__mark { content: url("../assets/mark-navy.png"); }
 @media (max-width: 880px) {
+  [data-theme^="tech"] .nav { background: var(--nav-bg-solid); }
   [data-theme^="tech"] .nav__links { background: var(--paper-2); border-left: 1px solid var(--line); }
 }
 
@@ -347,7 +348,7 @@
 }
 @keyframes auroraDrift { to { transform: translate3d(3%, -2%, 0) scale(1.06); } }
 @media (prefers-reduced-motion: reduce) { [data-theme^="aurora"] body::before { animation: none; } }
-[data-theme^="aurora"] .section, [data-theme^="aurora"] .hero, [data-theme^="aurora"] .footer, [data-theme^="aurora"] .nav { position: relative; z-index: 1; }
+[data-theme^="aurora"] .section, [data-theme^="aurora"] .hero, [data-theme^="aurora"] .footer { position: relative; z-index: 1; }
 
 /* nav */
 [data-theme^="aurora"] .nav { position: fixed; background: var(--nav-bg); border-bottom-color: var(--line); }
@@ -364,6 +365,7 @@
 [data-theme^="aurora"] .nav__burger span { background: var(--nav-ink); }
 [data-theme="aurora-light"] .nav .brand__mark { content: url("../assets/mark-navy.png"); }
 @media (max-width: 880px) {
+  [data-theme^="aurora"] .nav { background: var(--nav-bg-solid); }
   [data-theme^="aurora"] .nav__links { background: var(--paper); border-left: 1px solid var(--line); }
 }
 
@@ -491,7 +493,7 @@
    ========================================================================== */
 .theme-switch { flex-direction: column; gap: 3px; padding: 8px 10px; border-radius: 12px; }
 .theme-switch__row { display: flex; align-items: center; gap: 3px; }
-.theme-switch__fam { width: 76px; font: 600 10px/1 var(--font-mono, monospace); letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.theme-switch__fam { width: 84px; white-space: nowrap; font: 600 10px/1 var(--font-mono, monospace); letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.5); }
 .theme-switch button { padding: 7px 11px; font-size: 12px; }
 .theme-switch__all { width: auto; height: 28px; padding: 0 10px; border-radius: 8px; color: rgba(255,255,255,.75); font: 600 11px/1 var(--font-sans, sans-serif); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-left: auto; }
 .theme-switch__all:hover { color: #fff; background: rgba(255,255,255,.1); }

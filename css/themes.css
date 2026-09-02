@@ -15,6 +15,7 @@
 [data-theme="teal"] .nav__links a.nav__cta { background: var(--navy); }
 [data-theme="teal"] .nav__links a.nav__cta:hover { background: var(--navy-700); }
 [data-theme="teal"] .nav__links a::after { background: #fff; }
+@media (max-width: 880px) { [data-theme="teal"] .nav__links { background: var(--teal-600); } }
 
 [data-theme="teal"] .hero { background: var(--teal); }
 [data-theme="teal"] .hero__photo { opacity: .75; filter: saturate(.85) contrast(1.05); }
@@ -57,6 +58,7 @@
 [data-theme="light"] .nav__social a:hover { background: rgba(6,39,58,.06); color: var(--navy); }
 [data-theme="light"] .nav__burger span { background: var(--navy); }
 @media (max-width: 880px) {
+  [data-theme="light"] .nav { background: rgba(255,254,248,.97); }
   [data-theme="light"] .nav__links { background: var(--paper); }
   [data-theme="light"] .nav__links a { color: var(--navy); }
 }
@@ -116,7 +118,7 @@
    Theme switcher (preview only) - remove once a variant is chosen
    ========================================================================== */
 .theme-switch {
-  position: fixed; right: 18px; bottom: 18px; z-index: 90;
+  position: fixed; right: 18px; bottom: 18px; z-index: 40;
   display: flex; gap: 4px; padding: 5px; border-radius: 999px;
   background: rgba(6,39,58,.92); border: 1px solid rgba(255,255,255,.15); box-shadow: 0 12px 40px -12px rgba(0,0,0,.5);
   backdrop-filter: blur(10px);
