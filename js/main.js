@@ -7,7 +7,11 @@
   const links = document.getElementById("navLinks");
   const burger = document.getElementById("burger");
 
-  const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 24);
+  const toTop = document.querySelector(".to-top");
+  const onScroll = () => {
+    nav.classList.toggle("is-scrolled", window.scrollY > 24);
+    if (toTop) toTop.classList.toggle("is-visible", window.scrollY > 600);
+  };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -27,7 +31,7 @@
   );
 
   // Brand (logo + wordmark) in the nav and footer: scroll back to the very top
-  document.querySelectorAll('a.brand[href="#top"]').forEach((a) =>
+  document.querySelectorAll('a[href="#top"], a[href="#home"]').forEach((a) =>
     a.addEventListener("click", (e) => {
       e.preventDefault();
       links.classList.remove("is-open"); burger.classList.remove("is-open");

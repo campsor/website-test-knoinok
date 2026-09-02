@@ -351,6 +351,18 @@ sup { font-size: .5em; vertical-align: super; }
 .footer__legal p { margin-bottom: 10px; }
 .footer__bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid var(--line-on-dark); font-size: 13px; }
 
+/* Back to top */
+.to-top {
+  position: fixed; left: 18px; bottom: 18px; z-index: 45;
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--teal); color: #fff; box-shadow: 0 12px 30px -12px rgba(6,39,58,.6);
+  opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .3s var(--ease), transform .3s var(--ease), background .2s;
+}
+.to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--teal-600); }
+@media (max-width: 560px) { .to-top { left: 12px; bottom: 12px; width: 40px; height: 40px; } }
+
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }

@@ -499,3 +499,10 @@
 .theme-switch__all:hover { color: #fff; background: rgba(255,255,255,.1); }
 .theme-switch__head { display: flex; align-items: center; margin-bottom: 4px; }
 @media (max-width: 560px) { .theme-switch__fam { width: 64px; } .theme-switch button { padding: 6px 8px; font-size: 11px; } }
+
+/* back-to-top button in families 2 and 3 */
+[data-theme^="tech"] .to-top { border-radius: 4px; background: var(--acc); color: var(--acc-ink); box-shadow: 0 0 24px -6px rgba(var(--acc-rgb),.7); }
+[data-theme^="tech"] .to-top:hover { filter: brightness(1.1); }
+[data-theme^="aurora"] .to-top { background: var(--cta-grad); color: #fff; }
+[data-theme="aurora"] .to-top { color: var(--acc-ink); }
+[data-theme="aurora-teal"] .to-top { color: #fff; }
