@@ -126,7 +126,8 @@
     function render() {
       host.innerHTML = "";
       const W = host.clientWidth, H = host.clientHeight;
-      const pad = { t: 14, r: 64, b: 28, l: 10 };
+      const narrow = W < 640;
+      const pad = { t: 14, r: narrow ? 8 : 64, b: 28, l: 10 };
       const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
       const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: "none" });
 
@@ -145,9 +146,16 @@
 
       // grid + y labels
       const grid = el("g", { class: "grid" }), axis = el("g", { class: "axis" });
+      const lastY = y(series[series.length - 1].value) - 10;
       for (let v = y0; v <= y1 + 1e-9; v += step) {
         grid.append(el("line", { x1: pad.l, x2: pad.l + iw, y1: y(v), y2: y(v) }));
-        const t = el("text", { x: pad.l + iw + 8, y: y(v) + 4 }); t.textContent = Math.round(v); axis.append(t);
+        if (narrow) {
+          // labels sit inside the plot, just above their grid line; skip one that would collide with the end label
+          if (v === y0 || Math.abs((y(v) - 4) - lastY) < 14) continue;
+          const t = el("text", { x: pad.l + iw - 2, y: y(v) - 4, "text-anchor": "end" }); t.textContent = Math.round(v); axis.append(t);
+        } else {
+          const t = el("text", { x: pad.l + iw + 8, y: y(v) + 4 }); t.textContent = Math.round(v); axis.append(t);
+        }
       }
       // x year ticks (January of each year)
       series.forEach((d, i) => {
