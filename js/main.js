@@ -229,7 +229,7 @@
     let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(render, 150); });
   })();
 
-  /* ---------- Contact form: Formspree (AJAX) with mailto fallback ---------- */
+  /* ---------- Contact form: Web3Forms (AJAX) ---------- */
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
   form.addEventListener("submit", async (e) => {
@@ -237,23 +237,16 @@
     status.className = "form__status";
     if (!form.checkValidity()) { form.reportValidity(); return; }
     const data = new FormData(form);
-    const configured = !/YOUR_FORM_ID/.test(form.action);
-
-    if (!configured) {
-      // No backend configured yet: open the visitor's mail client with the message pre-filled.
-      const body = ["Name: " + data.get("name"), "Email: " + data.get("email"), "Phone: " + (data.get("phone") || "-"),
-        "Company: " + (data.get("company") || "-"), "", data.get("message")].join("\n");
-      window.location.href = "mailto:info@campsorcapital.com?subject=" + encodeURIComponent("Investor enquiry — Campsor Capital") + "&body=" + encodeURIComponent(body);
-      status.textContent = "Opening your email client…";
-      return;
-    }
+    if (data.get("botcheck")) return; // honeypot tripped: silently ignore
+    data.delete("botcheck");
 
     const btn = form.querySelector("button[type=submit]");
     btn.disabled = true; status.textContent = "Sending…";
     try {
       const res = await fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } });
-      if (res.ok) { form.reset(); status.textContent = "Thank you. We will be in touch shortly."; }
-      else { throw new Error("Request failed"); }
+      const out = await res.json().catch(() => ({}));
+      if (res.ok && out.success !== false) { form.reset(); status.textContent = "Thank you. We will be in touch shortly."; }
+      else { throw new Error(out.message || "Request failed"); }
     } catch (err) {
       status.textContent = "Something went wrong. Please email us at info@campsorcapital.com.";
       status.classList.add("is-error");

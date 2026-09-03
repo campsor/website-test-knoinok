@@ -318,12 +318,11 @@
       <p class="contact__mail">Or write to <a href="mailto:info@campsorcapital.com">info@campsorcapital.com</a></p>
     </div>
 
-    <!--
-      GitHub Pages is static: the form needs a form backend.
-      1) Create a free form at https://formspree.io, copy your form ID
-      2) Replace YOUR_FORM_ID below. Until then, the form falls back to opening the user's mail client.
-    -->
-    <form class="form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+    <form class="form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="99b251b9-1fee-4ae8-9702-a17ed384f5ea">
+      <input type="hidden" name="subject" value="New investor enquiry - campsorcapital.com">
+      <input type="hidden" name="from_name" value="Campsor Capital website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="form__row">
         <label class="field">
           <span>Name *</span>
@@ -348,9 +347,8 @@
         <span>Message *</span>
         <textarea name="message" rows="5" required></textarea>
       </label>
-      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
       <label class="check">
-        <input type="checkbox" name="professional" required>
+        <input type="checkbox" name="professional_investor" value="yes" required>
         <span>I confirm I am a professional or accredited investor.</span>
       </label>
       <button type="submit" class="btn btn--light">Submit</button>
