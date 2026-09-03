@@ -266,5 +266,16 @@
       paint();
     });
     paint();
+    // font test: default vs Roboto
+    const curF = () => document.documentElement.getAttribute("data-font") || "default";
+    const paintF = () => sw.querySelectorAll("button[data-font-set]").forEach((b) => b.classList.toggle("is-active", b.dataset.fontSet === curF()));
+    sw.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-font-set]"); if (!b) return;
+      document.documentElement.setAttribute("data-font", b.dataset.fontSet);
+      try { localStorage.setItem("campsor-font", b.dataset.fontSet); } catch (err) {}
+      const u = new URL(location.href); u.searchParams.set("font", b.dataset.fontSet); history.replaceState(null, "", u.pathname + u.search + u.hash);
+      paintF();
+    });
+    paintF();
   }
 })();

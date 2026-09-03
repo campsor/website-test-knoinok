@@ -506,3 +506,16 @@
 [data-theme^="aurora"] .to-top { background: var(--cta-grad); color: #fff; }
 [data-theme="aurora"] .to-top { color: var(--acc-ink); }
 [data-theme="aurora-teal"] .to-top { color: #fff; }
+
+/* ==========================================================================
+   Font test: ?font=roboto  -  Roboto Regular for text, Roboto Bold for headings/buttons
+   ========================================================================== */
+[data-font="roboto"] { --font-sans: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif; --font-mono: "Roboto", system-ui, sans-serif; }
+[data-font="roboto"] body { font-weight: 400; }
+[data-font="roboto"] h1, [data-font="roboto"] h2, [data-font="roboto"] h3, [data-font="roboto"] .btn,
+[data-font="roboto"] .brand__word, [data-font="roboto"] .perf-table thead th, [data-font="roboto"] .perf-table tbody th,
+[data-font="roboto"] .perf-table__annual { font-weight: 700; }
+[data-font="roboto"] .eyebrow, [data-font="roboto"] .facts__k, [data-font="roboto"] .member__role, [data-font="roboto"] .field span,
+[data-font="roboto"] .hero__ticks, [data-font="roboto"] .pillar__num { font-weight: 500; letter-spacing: .12em; }
+[data-font="roboto"] .perf-table { font-size: 14px; }
+[data-font="roboto"][data-theme^="tech"] h1 { font-weight: 700; letter-spacing: -.01em; }

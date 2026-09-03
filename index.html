@@ -13,13 +13,13 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=__BUILD__">
   <link rel="stylesheet" href="css/themes.css?v=__BUILD__">
   <link rel="stylesheet" href="css/themes-2.css?v=__BUILD__">
   <script>
     /* Theme variant: ?theme=<family>[-colour], see README, remembered in localStorage. Default: navy */
-    (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=q||localStorage.getItem("campsor-theme")||"navy";if(!/^(navy|teal|light|tech|tech-teal|tech-light|aurora|aurora-teal|aurora-light)$/.test(t))t="navy";document.documentElement.setAttribute("data-theme",t);if(q)localStorage.setItem("campsor-theme",t);}catch(e){}})();
+    (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=q||localStorage.getItem("campsor-theme")||"navy";if(!/^(navy|teal|light|tech|tech-teal|tech-light|aurora|aurora-teal|aurora-light)$/.test(t))t="navy";document.documentElement.setAttribute("data-theme",t);if(q)localStorage.setItem("campsor-theme",t);var fq=new URLSearchParams(location.search).get("font");var f=fq||localStorage.getItem("campsor-font")||"default";if(!/^(default|roboto)$/.test(f))f="default";document.documentElement.setAttribute("data-font",f);if(fq)localStorage.setItem("campsor-font",f);}catch(e){}})();
   </script>
 </head>
 <body>
@@ -407,6 +407,8 @@
     <button type="button" data-theme-set="tech">Navy</button><button type="button" data-theme-set="tech-teal">Teal</button><button type="button" data-theme-set="tech-light">Light</button></div>
   <div class="theme-switch__row"><span class="theme-switch__fam">3 Aurora</span>
     <button type="button" data-theme-set="aurora">Navy</button><button type="button" data-theme-set="aurora-teal">Teal</button><button type="button" data-theme-set="aurora-light">Light</button></div>
+  <div class="theme-switch__row"><span class="theme-switch__fam">Font</span>
+    <button type="button" data-font-set="default">Default</button><button type="button" data-font-set="roboto">Roboto</button></div>
 </div>
 
 <script src="js/main.js?v=__BUILD__" defer></script>
