@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/themes-2.css?v=__BUILD__">
   <script>
     /* Theme variant: ?theme=<family>[-colour], see README, remembered in localStorage. Default: navy */
-    (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=q||localStorage.getItem("campsor-theme")||"navy";if(!/^(navy|teal|light|tech|tech-teal|tech-light|aurora|aurora-teal|aurora-light)$/.test(t))t="navy";document.documentElement.setAttribute("data-theme",t);if(q)localStorage.setItem("campsor-theme",t);var fq=new URLSearchParams(location.search).get("font");var f=fq||localStorage.getItem("campsor-font")||"default";if(!/^(default|roboto)$/.test(f))f="default";document.documentElement.setAttribute("data-font",f);if(fq)localStorage.setItem("campsor-font",f);}catch(e){}})();
+    (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=q||localStorage.getItem("campsor-theme")||"tech-teal";if(!/^(navy|teal|light|tech|tech-teal|tech-light|aurora|aurora-teal|aurora-light)$/.test(t))t="tech-teal";document.documentElement.setAttribute("data-theme",t);if(q)localStorage.setItem("campsor-theme",t);var fq=new URLSearchParams(location.search).get("font");var f=fq||localStorage.getItem("campsor-font")||"roboto";if(!/^(default|roboto)$/.test(f))f="roboto";document.documentElement.setAttribute("data-font",f);if(fq)localStorage.setItem("campsor-font",f);}catch(e){}})();
   </script>
 </head>
 <body>
@@ -95,9 +95,7 @@
       <ul class="facts reveal">
         <li><span class="facts__k">Strategy</span><span class="facts__v">Quantitative value, market-neutral</span></li>
         <li><span class="facts__k">Process</span><span class="facts__v">Semi-systematic, data-driven</span></li>
-        <li><span class="facts__k">Venues</span><span class="facts__v">Spot, derivatives, DeFi</span></li>
         <li><span class="facts__k">Track record</span><span class="facts__v">Since 2019</span></li>
-        <li><span class="facts__k">Regulation</span><span class="facts__v">BVI FSC Approved Manager</span></li>
         <li><span class="facts__k">Investors</span><span class="facts__v">Professional &amp; accredited</span></li>
       </ul>
     </div>
@@ -315,7 +313,6 @@
       <h2>Get in touch</h2>
       <p>Our funds are open exclusively to professional and accredited investors, with a minimum investment of $100,000.</p>
       <p>If you meet these criteria and would like to learn more, please complete the form to receive additional information.</p>
-      <p class="contact__mail">Or write to <a href="mailto:info@campsorcapital.com">info@campsorcapital.com</a></p>
     </div>
 
     <form class="form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>

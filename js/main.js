@@ -248,7 +248,7 @@
       if (res.ok && out.success !== false) { form.reset(); status.textContent = "Thank you. We will be in touch shortly."; }
       else { throw new Error(out.message || "Request failed"); }
     } catch (err) {
-      status.textContent = "Something went wrong. Please email us at info@campsorcapital.com.";
+      status.textContent = "Something went wrong. Please try again in a few minutes.";
       status.classList.add("is-error");
     } finally { btn.disabled = false; }
   });
